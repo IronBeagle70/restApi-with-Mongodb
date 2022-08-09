@@ -1,0 +1,31 @@
+
+GET http://localhost:3000/api/tasks?title=web
+###
+
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "buscando este titulo",
+    "description": "trabajo interno",
+    "done":false
+}
+
+### una tarea
+GET http://localhost:3000/api/tasks/62f058173b8e5c7c8689cf3e
+
+### borrar una tarea
+
+DELETE http://localhost:3000/api/tasks/62f063c339002b68a022bd98
+
+### mostrar tareas hechas
+
+GET http://localhost:3000/api/tasks/done
+
+### actualizar datos de una tarea
+PUT http://localhost:3000/api/tasks/62f0651751307ab51080062c
+Content-Type: application/json
+
+{
+    "done" : false
+}
